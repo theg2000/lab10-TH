@@ -1,3 +1,6 @@
+#https://github.com/theg2000/lab10-TH
+#Partner 1: Trevor Hegarty
+
 import unittest
 import math
 import calculator  
