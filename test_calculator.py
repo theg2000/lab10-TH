@@ -18,13 +18,13 @@ class TestCalculator(unittest.TestCase):
 
     def test_log_invalid_argument(self):
         with self.assertRaises(ValueError):
-            calculator.log(-2, 8)
+            calculator.logarithm(-2, 8)
         with self.assertRaises(ValueError):
-            calculator.log(2, -8)
+            calculator.logarithm(2, -8)
         with self.assertRaises(ValueError):
-            calculator.log(0, 10)
+            calculator.logarithm(0, 10)
         with self.assertRaises(ValueError):
-            calculator.log(1, 10)
+            calculator.logarithm(1, 10)
 
     def test_hypotenuse(self):
         self.assertAlmostEqual(calculator.hypotenuse(3, 4), 5.0)
