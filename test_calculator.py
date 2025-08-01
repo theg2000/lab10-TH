@@ -9,9 +9,9 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(calculator.mul(-2, 5), -10)
 
     def test_divide(self):
-        self.assertEqual(calculator.div(2, 10), 5)
+        self.assertEqual(calculator.div(10, 2), 5)
         with self.assertRaises(ZeroDivisionError):
-            calculator.div(0, 5)
+            calculator.div(5, 0)
 
     def test_log_invalid_argument(self):
         with self.assertRaises(ValueError):
@@ -20,6 +20,8 @@ class TestCalculator(unittest.TestCase):
             calculator.log(2, -8)
         with self.assertRaises(ValueError):
             calculator.log(0, 10)
+        with self.assertRaises(ValueError):
+            calculator.log(1, 10)
 
     def test_hypotenuse(self):
         self.assertAlmostEqual(calculator.hypotenuse(3, 4), 5.0)
@@ -29,6 +31,7 @@ class TestCalculator(unittest.TestCase):
         self.assertAlmostEqual(calculator.square_root(9), 3.0)
         with self.assertRaises(ValueError):
             calculator.square_root(-4)
+
 
 # Do not touch this
 if __name__ == "__main__":
