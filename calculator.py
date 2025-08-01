@@ -1,9 +1,6 @@
-"""
-calculator.py
-- Defines functions used to create a simple calculator
+#https://github.com/theg2000/lab10-TH
+#Partner 1: Trevor Hegarty
 
-One function per operation, in order.
-"""
 import math
 
 def square_root(a):
